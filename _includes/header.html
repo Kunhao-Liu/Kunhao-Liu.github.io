@@ -96,6 +96,15 @@
               {% endfor -%}
               {%- if site.enable_darkmode %}
 
+              <!-- cv -->
+              <li class="nav-item {% if page.title == p.title %}active{% endif %}">
+                <a class="nav-link" href="{{ relative_url | prepend: 'assets/pdf/cv.pdf' }}">cv
+                </a>
+
+                <!-- <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer">cv</a> -->
+              </li>
+              
+
               <!-- Toogle theme mode -->
               <li class="toggle-container">
                 <button id="light-toggle" title="Change theme">
