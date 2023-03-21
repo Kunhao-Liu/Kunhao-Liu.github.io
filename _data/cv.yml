@@ -1,0 +1,59 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Kunhao Liu
+    - name: Base
+      value: Singapore
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. student in computer science
+      institution: Nanyang Technological University, Singapore
+      year: 2022-now
+    - title: Undergraduate student in software engineering
+      institution: Beihang University, Beijing, China
+      year: 2018-2022
+
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: 3D Scene Understanding & Decomposing Using Open Vocabulary Texts
+      institution: 'Supervisor: Prof. Shijian Lu, Nanyang Technological University'
+      year: 2022-now
+      description:
+        - Presented a new method for extracting 3D objects from intricate real-world scenes using open-vocabulary texts.
+        - Our approach transfers knowledge from a text2image diffusion model to 3D scenes with a generative loss.
+        - Our method is capable of detecting and segmenting 3D objects in a zero-shot manner.
+    
+    - title: 3D Scene Appearance Editing through Style Transfer
+      institution: 'Supervisor: Prof. Shijian Lu, Nanyang Technological University'
+      year: 2022-now
+      description:
+        - Introduced an innovative framework that can generate zero-shot high-quality 3D stylization.
+        - Resolved the three-way dilemma over geometry reconstruction, high-quality stylization, and zero-shot ability.
+        - Designed novel algorithms to maintain multi-view consistency and improve stylization efficiency.
+        - Our method delivers state-of-the-art 3D stylization results and can realize practical applications.
+
+    - title: 2D Image Synthesis through Style Transfer
+      institution: 'Supervisor: Prof. Lu Sheng, Beihang University'
+      year: 2021-2022
+      description:
+        - Developed a zero-shot 2D style transfer algorithm utilizing Transformer and Bilateral Grid.
+        - Implemented a per-style-per-model style transfer algorithm using Transformer and Markovian discriminator.
+        - Both methods attain visually state-of-the-art performance.
+
+
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2022
+      items: 
+        - Outstanding Graduate of Beihang University
+        - Outstanding Graduation Thesis
+    - year: 2019-2021
+      items: 
+        - Scholarship for Academic Records
