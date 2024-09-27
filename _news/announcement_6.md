@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-09-24
+date: 2024-06-17
 inline: true
 ---
 
-One paper is accepted to SIGGRAPH Asia 2024. :smiling_face_with_tear:
+Serve as a program committee member in [Neural Rendering Intelligence](https://neural-rendering.com/). :mountain_railway:
