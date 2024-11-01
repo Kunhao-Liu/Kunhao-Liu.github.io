@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2024-06-17
+date: 2024-09-24
 inline: true
 ---
 
-Serve as a program committee member in [Neural Rendering Intelligence](https://neural-rendering.com/). :mountain_railway:
+Two papers are accepted to SIGGRAPH Asia 2024 and WACV 2025 respectively. :japanese_goblin:

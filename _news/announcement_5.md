@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-09-22
+date: 2024-06-17
 inline: true
 ---
 
-One paper is accepted to NeurIPS 2023. :relieved:
+Serve as a program committee member in [Neural Rendering Intelligence](https://neural-rendering.com/). :mountain_railway:

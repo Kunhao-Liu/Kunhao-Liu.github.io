@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-08-12
+date: 2023-09-22
 inline: true
 ---
 
-One paper is accepted to ICCV 2023. :airplane:
+Two papers are accepted to NeurIPS 2023 and ICCV 2023 respectively. :relieved:
