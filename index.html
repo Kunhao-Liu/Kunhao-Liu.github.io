@@ -19,6 +19,7 @@
   --accent: #1d4ed8;
   --news-date: rgba(15, 23, 42, 0.66);
   --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  --border: rgba(15, 23, 42, 0.08);
   --max-width: 1200px;
       }
 
@@ -33,7 +34,7 @@
         background: var(--background);
         color: var(--foreground);
         line-height: 1.6;
-  padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 2.5vw, 5rem);
+        padding: clamp(1.1rem, 3vw, 3.6rem) clamp(0.75rem, 3.5vw, 4.5rem);
       }
 
       .hero {
@@ -50,7 +51,46 @@
           "publications";
         align-items: start;
         gap: clamp(1.75rem, 4vw, 3.5rem);
-  padding: clamp(1.25rem, 3vw, 2.5rem);
+        padding: clamp(1rem, 2.5vw, 2.2rem);
+      }
+
+      .site-footer {
+        max-width: var(--max-width);
+        margin: clamp(2rem, 5vw, 4.5rem) auto 0;
+        padding: clamp(1.2rem, 3vw, 1.8rem) clamp(1rem, 3vw, 2rem);
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .site-footer__meta {
+        margin: 0;
+      }
+
+      .site-footer__links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .site-footer__link {
+        color: var(--accent);
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .site-footer__link:hover,
+      .site-footer__link:focus-visible {
+        color: var(--foreground);
       }
 
       .hero__header {
@@ -282,6 +322,11 @@
         font-size: 0.95rem;
       }
 
+      .hero__publication-author-highlight {
+        font-weight: 600;
+        color: var(--accent);
+      }
+
       .hero__publication-actions {
         display: flex;
         flex-wrap: wrap;
@@ -409,11 +454,11 @@
 
       @media (max-width: 680px) {
         body {
-          padding: 1.5rem 1.25rem;
+          padding: 1.1rem 0.85rem;
         }
 
         .hero {
-          padding: 1.75rem 1.5rem;
+          padding: 1.35rem 1rem;
         }
 
         .hero__contacts {
@@ -441,6 +486,11 @@
         .hero__publication-card {
           padding: 1.1rem;
         }
+
+        .site-footer {
+          padding: 1rem 0.8rem;
+          gap: 0.6rem;
+        }
       }
 
       @media (prefers-color-scheme: dark) {
@@ -451,6 +501,7 @@
           --accent: #60a5fa;
           --shadow: 0 20px 45px rgba(15, 23, 42, 0.55);
           --news-date: rgba(248, 250, 252, 0.72);
+          --border: rgba(148, 163, 184, 0.28);
         }
 
         .hero__contact-link {
@@ -479,6 +530,10 @@
         .hero__publication-actions a:focus-visible {
           background: var(--accent);
           color: #0b1220;
+        }
+
+        .site-footer__link {
+          color: #bfdbfe;
         }
       }
     </style>
@@ -652,6 +707,81 @@
               <article class="hero__publication-card">
                 <figure class="hero__publication-preview">
                   <img
+                    src="assets/publication_preview/rollingforcing.gif"
+                    alt="Preview of Rolling Forcing: Autoregressive Long Video Diffusion in Real Time"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">Rolling Forcing: Autoregressive Long Video Diffusion in Real Time</h3>
+                  <p class="hero__publication-authors">
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Wenbo Hu, Jiale Xu, Ying Shan,
+                    Shijian Lu
+                  </p>
+                  <p class="hero__publication-venue">arXiv preprint, 2025</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2509.25161" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/TencentARC/RollingForcing" target="_blank" rel="noreferrer noopener"
+                        >Code</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://kunhao-liu.github.io/Rolling_Forcing_Webpage/" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
+                    src="assets/publication_preview/FF3D.gif"
+                    alt="Preview of Advances in feed-forward 3D reconstruction and view synthesis: A survey"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">
+                    Advances in Feed-Forward 3D Reconstruction and View Synthesis
+                  </h3>
+                  <p class="hero__publication-authors">
+                    Jiahui Zhang, Yuelei Li, Anpei Chen, Muyu Xu,
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Jianyuan Wang, Xiao-Xiao Long,
+                    Hanxue Liang, Zexiang Xu, Hao Su, Christian Theobalt, Christian Rupprecht, Andrea Vedaldi,
+                    Hanspeter Pfister, Shijian Lu, Fangneng Zhan
+                  </p>
+                  <p class="hero__publication-venue">arXiv preprint, 2025</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2507.14501" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://fnzhan.com/projects/Feed-Forward-3D/" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
                     src="assets/publication_preview/viewextrapolator.gif"
                     alt="Preview of Novel View Extrapolation with Video Diffusion Priors"
                     width="320"
@@ -661,7 +791,9 @@
                 </figure>
                 <div class="hero__publication-meta">
                   <h3 class="hero__publication-title">Novel View Extrapolation with Video Diffusion Priors</h3>
-                  <p class="hero__publication-authors">Kunhao Liu, Ling Shao, Shijian Lu</p>
+                  <p class="hero__publication-authors">
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Ling Shao, Shijian Lu
+                  </p>
                   <p class="hero__publication-venue">arXiv preprint, 2024</p>
                   <ul class="hero__publication-actions" aria-label="Publication resources">
                     <li>
@@ -697,7 +829,8 @@
                 <div class="hero__publication-meta">
                   <h3 class="hero__publication-title">StyleGaussian: Instant 3D Style Transfer with Gaussian Splatting</h3>
                   <p class="hero__publication-authors">
-                    Kunhao Liu, Fangneng Zhan, Muyu Xu, Christian Theobalt, Ling Shao, Shijian Lu
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Fangneng Zhan, Muyu Xu, Christian
+                    Theobalt, Ling Shao, Shijian Lu
                   </p>
                   <p class="hero__publication-venue">SIGGRAPH Asia, 2024</p>
                   <ul class="hero__publication-actions" aria-label="Publication resources">
@@ -734,8 +867,8 @@
                 <div class="hero__publication-meta">
                   <h3 class="hero__publication-title">Weakly Supervised 3D Open-vocabulary Segmentation</h3>
                   <p class="hero__publication-authors">
-                    Kunhao Liu, Fangneng Zhan, Jiahui Zhang, Muyu Xu, Yingchen Yu, Abdulmotaleb El Saddik,
-                    Christian Theobalt, Eric Xing, Shijian Lu
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Fangneng Zhan, Jiahui Zhang, Muyu
+                    Xu, Yingchen Yu, Abdulmotaleb El Saddik, Christian Theobalt, Eric Xing, Shijian Lu
                   </p>
                   <p class="hero__publication-venue">NeurIPS, 2023</p>
                   <ul class="hero__publication-actions" aria-label="Publication resources">
@@ -772,8 +905,8 @@
                 <div class="hero__publication-meta">
                   <h3 class="hero__publication-title">StyleRF: Zero-shot 3D Style Transfer of Neural Radiance Fields</h3>
                   <p class="hero__publication-authors">
-                    Kunhao Liu, Fangneng Zhan, Yiwen Chen, Jiahui Zhang, Yingchen Yu, Abdulmotaleb El Saddik,
-                    Shijian Lu, Eric Xing
+                    <span class="hero__publication-author-highlight">Kunhao Liu</span>, Fangneng Zhan, Yiwen Chen, Jiahui
+                    Zhang, Yingchen Yu, Abdulmotaleb El Saddik, Shijian Lu, Eric Xing
                   </p>
                   <p class="hero__publication-venue">CVPR, 2023</p>
                   <ul class="hero__publication-actions" aria-label="Publication resources">
@@ -799,5 +932,32 @@
           </ul>
       </section>
     </section>
+    <footer class="site-footer" aria-label="Site footer">
+      <p class="site-footer__meta">© 2025 Kunhao Liu. All rights reserved.</p>
+      <ul class="site-footer__links" aria-label="Additional links">
+        <li>
+          <a class="site-footer__link" href="mailto:kunhao001@e.ntu.edu.sg">Email</a>
+        </li>
+        <li>
+          <a
+            class="site-footer__link"
+            href="https://scholar.google.com/citations?user=fAc8WqwAAAAJ"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Google Scholar</a
+          >
+        </li>
+        <li>
+          <a class="site-footer__link" href="https://github.com/Kunhao-Liu" target="_blank" rel="noreferrer noopener"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a class="site-footer__link" href="https://x.com/SongNeverPanic" target="_blank" rel="noreferrer noopener"
+            >X/Twitter</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
