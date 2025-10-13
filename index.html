@@ -33,7 +33,7 @@
         background: var(--background);
         color: var(--foreground);
         line-height: 1.6;
-        padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 6rem);
+  padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 2.5vw, 5rem);
       }
 
       .hero {
@@ -46,10 +46,11 @@
           "header"
           "portrait"
           "body"
-          "news";
+          "news"
+          "publications";
         align-items: start;
         gap: clamp(1.75rem, 4vw, 3.5rem);
-        padding: clamp(1.5rem, 3.5vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
       }
 
       .hero__header {
@@ -182,6 +183,123 @@
         gap: 1rem;
       }
 
+      .hero__publications {
+        grid-area: publications;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hero__publications-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .hero__publications-title {
+        margin: 0;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--foreground);
+      }
+
+      .hero__publications-indicator {
+        width: 48px;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.55), rgba(37, 99, 235, 0.85));
+      }
+
+      .hero__publication-card {
+        display: grid;
+        gap: 1.5rem;
+        padding: clamp(1.25rem, 3vw, 1.75rem);
+        border-radius: 20px;
+        background: rgba(15, 23, 42, 0.04);
+        align-items: center;
+      }
+
+      .hero__publication-preview {
+        margin: 0;
+        width: min(280px, 100%);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+      }
+
+      .hero__publication-preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .hero__publication-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .hero__publication-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(29, 78, 216, 0.12);
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        width: fit-content;
+      }
+
+      .hero__publication-title {
+        margin: 0;
+        font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      .hero__publication-authors,
+      .hero__publication-venue {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .hero__publication-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero__publication-actions a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(29, 78, 216, 0.08);
+        color: var(--accent);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .hero__publication-actions a:hover,
+      .hero__publication-actions a:focus-visible {
+        background: var(--accent);
+        color: #fff;
+      }
+
       .hero__news-header {
         display: flex;
         align-items: center;
@@ -261,10 +379,16 @@
           grid-template-areas:
             "header portrait"
             "body portrait"
-            "news news";
+            "news news"
+            "publications publications";
           align-items: start;
           gap: clamp(2.5rem, 5vw, 4rem);
-          padding: clamp(2rem, 4vw, 3.5rem);
+          padding: clamp(1.75rem, 3.5vw, 3rem);
+        }
+
+        .hero__publication-card {
+          grid-template-columns: minmax(220px, 320px) 1fr;
+          align-items: center;
         }
 
         .hero__header {
@@ -274,11 +398,11 @@
 
       @media (max-width: 680px) {
         body {
-          padding: 2rem 1.5rem;
+          padding: 1.5rem 1.25rem;
         }
 
         .hero {
-          padding: 2.25rem 2rem;
+          padding: 1.75rem 1.5rem;
         }
 
         .hero__contacts {
@@ -302,6 +426,10 @@
         .hero__news-date {
           font-size: 0.88rem;
         }
+
+        .hero__publication-card {
+          padding: 1.2rem;
+        }
       }
 
       @media (prefers-color-scheme: dark) {
@@ -320,6 +448,27 @@
 
         .hero__news {
           background: rgba(148, 163, 184, 0.12);
+        }
+
+        .hero__publication-card {
+          background: rgba(148, 163, 184, 0.12);
+          box-shadow: none;
+        }
+
+        .hero__publication-badge {
+          background: rgba(96, 165, 250, 0.18);
+          color: #bfdbfe;
+        }
+
+        .hero__publication-actions a {
+          background: rgba(96, 165, 250, 0.18);
+          color: #bfdbfe;
+        }
+
+        .hero__publication-actions a:hover,
+        .hero__publication-actions a:focus-visible {
+          background: var(--accent);
+          color: #0b1220;
         }
       }
     </style>
@@ -476,6 +625,46 @@
               </span>
             </li>
           </ul>
+      </section>
+      <section class="hero__publications" aria-labelledby="hero-publications-heading">
+        <div class="hero__publications-header">
+          <h2 class="hero__publications-title" id="hero-publications-heading">Selected Publications</h2>
+          <span aria-hidden="true" class="hero__publications-indicator"></span>
+        </div>
+        <article class="hero__publication-card">
+          <figure class="hero__publication-preview">
+            <img
+              src="assets/publication_preview/viewextrapolator.gif"
+              alt="Preview of Novel View Extrapolation with Video Diffusion Priors"
+              width="320"
+              height="180"
+              loading="lazy"
+            />
+          </figure>
+          <div class="hero__publication-meta">
+            <span class="hero__publication-badge" aria-label="Selected work">Selected</span>
+            <h3 class="hero__publication-title">Novel View Extrapolation with Video Diffusion Priors</h3>
+            <p class="hero__publication-authors">Kunhao Liu, Ling Shao, Shijian Lu</p>
+            <p class="hero__publication-venue">arXiv preprint, 2024</p>
+            <ul class="hero__publication-actions" aria-label="Publication resources">
+              <li>
+                <a href="https://arxiv.org/abs/2411.14208" target="_blank" rel="noreferrer noopener"
+                  >Paper</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Kunhao-Liu/ViewExtrapolator" target="_blank" rel="noreferrer noopener"
+                  >Code</a
+                >
+              </li>
+              <li>
+                <a href="https://kunhao-liu.github.io/ViewExtrapolator/" target="_blank" rel="noreferrer noopener"
+                  >Project</a
+                >
+              </li>
+            </ul>
+          </div>
+        </article>
       </section>
     </section>
   </body>
