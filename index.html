@@ -146,6 +146,17 @@
         color: var(--foreground);
       }
 
+      .hero__job-market {
+        margin: 0;
+        font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+        font-weight: 600;
+        color: #b91c1c;
+        background: rgba(239, 68, 68, 0.12);
+        border-radius: 12px;
+        padding: 0.85rem 1rem;
+        border: 1px solid rgba(239, 68, 68, 0.28);
+      }
+
       .hero__contacts {
         display: flex;
         flex-wrap: wrap;
@@ -364,11 +375,6 @@
         font-size: 0.95rem;
       }
 
-      .hero__publication-authors {
-        font-weight: 300;
-        letter-spacing: 0.01em;
-      }
-
       .hero__publication-authors a {
         color: inherit;
         text-decoration: underline;
@@ -579,6 +585,12 @@
           background: rgba(148, 163, 184, 0.12);
         }
 
+        .hero__job-market {
+          color: #fca5a5;
+          background: rgba(239, 68, 68, 0.18);
+          border-color: rgba(252, 165, 165, 0.38);
+        }
+
         .hero__resume-button {
           background: rgba(148, 163, 184, 0.22);
           color: var(--foreground);
@@ -620,15 +632,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__header">
         <p class="hero__role">Generative Vision Researcher</p>
-  <h1 class="hero__name" id="hero-title">Kunhao <span class="hero__name-surname">Liu</span></h1>
+        <h1 class="hero__name" id="hero-title">Kunhao <span class="hero__name-surname">Liu</span></h1>
       </div>
       <div class="hero__portrait">
         <img
           class="hero__image"
           src="assets/prof_pic.jpg"
           alt="Portrait of Kunhao Liu"
-          width="320"
-          height="320"
         />
       </div>
       <div class="hero__body">
@@ -658,6 +668,10 @@
           and
           <a href="https://fnzhan.com/" target="_blank" rel="noreferrer noopener">Dr. Fangneng Zhan</a>.
           My current research focus is on <strong>Generative World Models</strong>.
+        </p>
+        <p class="hero__job-market" role="status">
+          I’ll be on the job market for 2026/2027. Feel free to reach out if you’re
+          interested.
         </p>
         <ul class="hero__contacts" aria-label="Contact links">
           <li>
