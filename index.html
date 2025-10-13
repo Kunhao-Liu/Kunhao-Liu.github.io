@@ -26,7 +26,6 @@
       * {
         box-sizing: border-box;
       }
-
       body {
         margin: 0;
         font-family: "Lexend", "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
@@ -125,8 +124,8 @@
       .hero__role {
         margin: 0;
         font-size: clamp(1.05rem, 2.5vw, 1.3rem);
-        font-weight: 400;
-        color: var(--muted);
+        width: fit-content;
+        margin: 0;
       }
 
       .hero__bio {
@@ -150,10 +149,49 @@
       .hero__contacts {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: 0.85rem;
         padding: 0;
         margin: 0;
         list-style: none;
+      }
+
+      .hero__resume-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        height: 48px;
+        padding: 0 1.25rem;
+        border-radius: 16px;
+        background: rgba(15, 23, 42, 0.08);
+        color: var(--foreground);
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+
+      .hero__resume-button:hover,
+      .hero__resume-button:focus-visible {
+        transform: translateY(-2px);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .hero__resume-icon {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        background-color: currentColor;
+        -webkit-mask-image: url("https://cdn.jsdelivr.net/npm/heroicons@2.1.4/24/solid/arrow-down-tray.svg");
+        mask-image: url("https://cdn.jsdelivr.net/npm/heroicons@2.1.4/24/solid/arrow-down-tray.svg");
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
       }
 
       .hero__contact-link {
@@ -326,6 +364,11 @@
         font-size: 0.95rem;
       }
 
+      .hero__publication-authors {
+        font-weight: 300;
+        letter-spacing: 0.01em;
+      }
+
       .hero__publication-authors a {
         color: inherit;
         text-decoration: underline;
@@ -487,6 +530,13 @@
           height: 44px;
         }
 
+        .hero__resume-button {
+          height: 44px;
+          padding: 0 1.05rem;
+          width: auto;
+          justify-content: center;
+        }
+
         .hero__news {
           padding: 1.3rem;
         }
@@ -527,6 +577,17 @@
 
         .hero__news {
           background: rgba(148, 163, 184, 0.12);
+        }
+
+        .hero__resume-button {
+          background: rgba(148, 163, 184, 0.22);
+          color: var(--foreground);
+        }
+
+        .hero__resume-button:hover,
+        .hero__resume-button:focus-visible {
+          background: var(--accent);
+          color: #0b1220;
         }
 
         .hero__publication-card {
@@ -639,6 +700,18 @@
               aria-label="X (formerly Twitter) profile"
             >
               <span class="hero__contact-icon hero__contact-icon--x" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="hero__resume-button"
+              href="assets/resume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Open Kunhao Liu's résumé in a new tab"
+            >
+              <span class="hero__resume-icon" aria-hidden="true"></span>
+             Résumé
             </a>
           </li>
         </ul>
@@ -1019,7 +1092,7 @@
     </section>
     <footer class="site-footer" aria-label="Site footer">
       <p class="site-footer__meta">© 2025 Kunhao Liu. All rights reserved.</p>
-      <p class="site-footer__note">Webpage template generated with GPT-5.</p>
+      <p class="site-footer__note">Webpage template generated with LLMs.</p>
       <ul class="site-footer__links" aria-label="Additional links">
         <li>
           <a class="site-footer__link" href="mailto:kunhao001@e.ntu.edu.sg">Email</a>
