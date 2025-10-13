@@ -187,7 +187,33 @@
         grid-area: publications;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
+      }
+
+      .hero__publications-list {
+        display: grid;
+        gap: clamp(1.4rem, 3vw, 1.9rem);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero__publications-subtitle {
+        margin: -1rem 0 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .hero__publications-subtitle a {
+        color: var(--accent);
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .hero__publications-subtitle a:hover,
+      .hero__publications-subtitle a:focus-visible {
+        color: var(--foreground);
       }
 
       .hero__publications-header {
@@ -215,8 +241,8 @@
 
       .hero__publication-card {
         display: grid;
-        gap: 1.5rem;
-        padding: clamp(1.25rem, 3vw, 1.75rem);
+        gap: 1.2rem;
+        padding: clamp(1.15rem, 2.5vw, 1.6rem);
         border-radius: 20px;
         background: rgba(15, 23, 42, 0.04);
         align-items: center;
@@ -224,7 +250,7 @@
 
       .hero__publication-preview {
         margin: 0;
-        width: min(280px, 100%);
+        width: min(220px, 100%);
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
@@ -240,21 +266,6 @@
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-      }
-
-      .hero__publication-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        padding: 0.35rem 0.75rem;
-        border-radius: 999px;
-        background: rgba(29, 78, 216, 0.12);
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        width: fit-content;
       }
 
       .hero__publication-title {
@@ -387,7 +398,7 @@
         }
 
         .hero__publication-card {
-          grid-template-columns: minmax(220px, 320px) 1fr;
+          grid-template-columns: minmax(180px, 240px) 1fr;
           align-items: center;
         }
 
@@ -428,7 +439,7 @@
         }
 
         .hero__publication-card {
-          padding: 1.2rem;
+          padding: 1.1rem;
         }
       }
 
@@ -455,8 +466,7 @@
           box-shadow: none;
         }
 
-        .hero__publication-badge {
-          background: rgba(96, 165, 250, 0.18);
+        .hero__publications-subtitle a {
           color: #bfdbfe;
         }
 
@@ -631,40 +641,162 @@
           <h2 class="hero__publications-title" id="hero-publications-heading">Selected Publications</h2>
           <span aria-hidden="true" class="hero__publications-indicator"></span>
         </div>
-        <article class="hero__publication-card">
-          <figure class="hero__publication-preview">
-            <img
-              src="assets/publication_preview/viewextrapolator.gif"
-              alt="Preview of Novel View Extrapolation with Video Diffusion Priors"
-              width="320"
-              height="180"
-              loading="lazy"
-            />
-          </figure>
-          <div class="hero__publication-meta">
-            <span class="hero__publication-badge" aria-label="Selected work">Selected</span>
-            <h3 class="hero__publication-title">Novel View Extrapolation with Video Diffusion Priors</h3>
-            <p class="hero__publication-authors">Kunhao Liu, Ling Shao, Shijian Lu</p>
-            <p class="hero__publication-venue">arXiv preprint, 2024</p>
-            <ul class="hero__publication-actions" aria-label="Publication resources">
-              <li>
-                <a href="https://arxiv.org/abs/2411.14208" target="_blank" rel="noreferrer noopener"
-                  >Paper</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/Kunhao-Liu/ViewExtrapolator" target="_blank" rel="noreferrer noopener"
-                  >Code</a
-                >
-              </li>
-              <li>
-                <a href="https://kunhao-liu.github.io/ViewExtrapolator/" target="_blank" rel="noreferrer noopener"
-                  >Project</a
-                >
-              </li>
-            </ul>
-          </div>
-        </article>
+          <p class="hero__publications-subtitle">
+            For the full list, please visit my
+            <a href="https://scholar.google.com/citations?user=fAc8WqwAAAAJ" target="_blank" rel="noreferrer noopener">
+              Google Scholar</a
+            >.
+          </p>
+          <ul class="hero__publications-list">
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
+                    src="assets/publication_preview/viewextrapolator.gif"
+                    alt="Preview of Novel View Extrapolation with Video Diffusion Priors"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">Novel View Extrapolation with Video Diffusion Priors</h3>
+                  <p class="hero__publication-authors">Kunhao Liu, Ling Shao, Shijian Lu</p>
+                  <p class="hero__publication-venue">arXiv preprint, 2024</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2411.14208" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/Kunhao-Liu/ViewExtrapolator" target="_blank" rel="noreferrer noopener"
+                        >Code</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://kunhao-liu.github.io/ViewExtrapolator/" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
+                    src="assets/publication_preview/stylegaussian.gif"
+                    alt="Preview of StyleGaussian: Instant 3D Style Transfer with Gaussian Splatting"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">StyleGaussian: Instant 3D Style Transfer with Gaussian Splatting</h3>
+                  <p class="hero__publication-authors">
+                    Kunhao Liu, Fangneng Zhan, Muyu Xu, Christian Theobalt, Ling Shao, Shijian Lu
+                  </p>
+                  <p class="hero__publication-venue">SIGGRAPH Asia, 2024</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2403.07807" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/Kunhao-Liu/StyleGaussian" target="_blank" rel="noreferrer noopener"
+                        >Code</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://kunhao-liu.github.io/StyleGaussian/" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
+                    src="assets/publication_preview/3d-ovs.gif"
+                    alt="Preview of Weakly Supervised 3D Open-vocabulary Segmentation"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">Weakly Supervised 3D Open-vocabulary Segmentation</h3>
+                  <p class="hero__publication-authors">
+                    Kunhao Liu, Fangneng Zhan, Jiahui Zhang, Muyu Xu, Yingchen Yu, Abdulmotaleb El Saddik,
+                    Christian Theobalt, Eric Xing, Shijian Lu
+                  </p>
+                  <p class="hero__publication-venue">NeurIPS, 2023</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2305.14093" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/Kunhao-Liu/3D-OVS" target="_blank" rel="noreferrer noopener"
+                        >Code</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/Kunhao-Liu/3D-OVS" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="hero__publication-card">
+                <figure class="hero__publication-preview">
+                  <img
+                    src="assets/publication_preview/stylerf.gif"
+                    alt="Preview of StyleRF: Zero-shot 3D Style Transfer of Neural Radiance Fields"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="hero__publication-meta">
+                  <h3 class="hero__publication-title">StyleRF: Zero-shot 3D Style Transfer of Neural Radiance Fields</h3>
+                  <p class="hero__publication-authors">
+                    Kunhao Liu, Fangneng Zhan, Yiwen Chen, Jiahui Zhang, Yingchen Yu, Abdulmotaleb El Saddik,
+                    Shijian Lu, Eric Xing
+                  </p>
+                  <p class="hero__publication-venue">CVPR, 2023</p>
+                  <ul class="hero__publication-actions" aria-label="Publication resources">
+                    <li>
+                      <a href="https://arxiv.org/abs/2303.10598" target="_blank" rel="noreferrer noopener"
+                        >Paper</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/Kunhao-Liu/StyleRF" target="_blank" rel="noreferrer noopener"
+                        >Code</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://kunhao-liu.github.io/StyleRF/" target="_blank" rel="noreferrer noopener"
+                        >Project</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+          </ul>
       </section>
     </section>
   </body>
